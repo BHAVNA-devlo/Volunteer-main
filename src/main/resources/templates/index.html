@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Volunteer List</title>
+</head>
+<body>
+    <h1>All Volunteers</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th><th>Name</th><th>Email</th><th>Availability</th>
+        </tr>
+        <tr th:each="v : ${volunteers}">
+            <td th:text="${v.id}"></td>
+            <td th:text="${v.name}"></td>
+            <td th:text="${v.email}"></td>
+            <td th:text="${v.availability}"></td>
+        </tr>
+    </table>
+</body>
+</html>
